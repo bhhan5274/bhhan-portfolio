@@ -1,0 +1,50 @@
+.btn {
+  position: relative;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.3rem;
+  color: $dark-primary-color;
+  text-decoration: none;
+  font-weight: 800;
+  border: 2px solid $dark-primary-color;
+  border-radius: 2px;
+  z-index: 0;
+  padding: .8rem 1.2rem;
+  cursor: pointer;
+  outline: none;
+  transition: color .2s ease-in-out,
+              border .2s ease-in-out,
+              background-color .2s ease-out .1s;
+
+  &.dark {
+    color: $white-primary-color;
+    border: 2px solid $white-primary-color;
+  }
+
+  &:hover {
+    color: $white-primary-color;
+  }
+
+  &:hover.dark {
+    color: $dark-primary-color;
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: $dark-primary-color;
+    z-index: -1;
+    transition: width .2s ease-out .1s;
+  }
+
+  &.dark::after {
+    background-color: $white-primary-color !important;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}

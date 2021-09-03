@@ -1,0 +1,87 @@
+.project-header {
+  background-color: $white-secondary-color;
+  color: $dark-secondary-color;
+  font-family: 'Nunito', sans-serif;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 2rem;
+
+    @media only screen and (max-width: $bp-smallest) {
+      justify-content: stretch;
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+
+  &.dark {
+    background-color: $dark-secondary-color;
+    color: $white-secondary-color;
+  }
+
+  &__title {
+    font-size: 2rem;
+    line-height: 1.8;
+
+    @media only screen and (max-width: $bp-largest) {
+      font-size: 1.8rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__text {
+    font-size: 1.8rem;
+    font-weight: 500;
+
+    @media only screen and (max-width: $bp-largest) {
+      font-size: 1.6rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__number {
+    font-size: 2rem;
+    color: $primary-color;
+    text-align: center;
+    font-weight: 400;
+
+    @media only screen and (max-width: $bp-largest) {
+      font-size: 1.8rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__right {
+    padding-right: 3rem;
+
+    @media only screen and (max-width: $bp-smallest) {
+      display: none;
+    }
+  }
+
+  &__hidden {
+    display: none;
+    font-size: 1.2rem;
+    font-weight: 400;
+
+    span {
+      color: $primary-color;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+      display: block;
+      margin-top: 1rem;
+    }
+  }
+}

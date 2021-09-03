@@ -1,0 +1,228 @@
+.projects-info {
+  background-color: $white-secondary-color;
+  padding: 4rem 0;
+
+  &.dark {
+    background-color: $dark-secondary-color;
+  }
+
+  &__subject {
+    font-size: 2.4rem;
+    font-family: 'Nunito', sans-serif;
+    margin-bottom: 2.5rem;
+    color: $dark-primary-color;
+
+    &.dark {
+      color: $white-secondary-color;
+    }
+  }
+
+  &__prev, &__next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    z-index: 2;
+    padding: 2rem;
+    background-color: $white-primary-color;
+    border: 1px solid $gray-light-color;
+    transition: all .2s ease-in-out;
+
+    @media only screen and (max-width: $bp-smallest) {
+      display: none;
+    }
+
+    &:hover {
+      background-color: $white-primary-color;
+      box-shadow: .2rem .2rem 1rem rgba($gray-light-color, .6);
+    }
+
+    &.dark:hover {
+      box-shadow: inset 0rem 0rem 10rem rgba($gray-light-color, .5);
+    }
+
+    i {
+      font-size: 2.5rem;
+      opacity: 1;
+      color: $gray-dark-color;
+      line-height: 1.6;
+    }
+
+    &::before {
+      display: none;
+    }
+  }
+
+  &__prev {
+    margin-left: 1.2rem;
+  }
+
+  &__next {
+    margin-right: 1.2rem;
+  }
+
+  &__item {
+    color: $dark-primary-color;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid $white-primary-color;
+    margin: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-family: 'Nunito', sans-serif;
+    cursor: pointer;
+
+    &:hover {
+      .projects-info__image-box {
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+
+    &.dark {
+      border: 2px solid $dark-primary-color;
+    }
+  }
+
+  &__content {
+    padding: 1.2rem .7rem;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  &__image-box {
+    height: 15rem;
+    width: 100%;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($gray-light2-color, .3);
+      z-index: 2;
+      opacity: 0;
+      transition: all .2s ease-in-out;
+    }
+  }
+
+  &__image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__title {
+    margin: .8rem 0;
+    font-size: 1.7rem;
+    @include ellipsis(2, 1.4);
+    color: $dark-primary-color;
+
+    @media only screen and (max-width: $bp-smallest) {
+      @include ellipsis(2, 1.4);
+    }
+
+    &.dark {
+      color: $white-primary-color;
+    }
+
+    h1 {
+      transition: all .2s ease-in-out;
+    }
+  }
+
+  &__detail {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    align-content: space-around;
+    margin-bottom: auto;
+  }
+
+  &__period {
+    margin-right: 2rem;
+  }
+
+  &__period, &__member {
+    display: flex;
+    margin-bottom: .6rem;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.3rem;
+    i {
+      font-size: 1.8rem;
+    }
+
+    color: $dark-primary-color;
+
+    &.dark {
+      color: $white-primary-color;
+    }
+  }
+
+  &__member {
+    span {
+      position: relative;
+      z-index: 2;
+      color: $white-primary-color;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2rem;
+      height: 2rem;
+
+      &::before {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 2rem;
+        height: 2rem;
+        background-color: $blue-color;
+        border-radius: 3px;
+      }
+    }
+  }
+
+  &__skills {
+    list-style: none;
+    display: flex;
+    align-content: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    margin-top: auto;
+
+    & > *:not(:last-child) {
+      margin-right: -.6rem;
+    }
+
+    div{
+      overflow: hidden;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      background-color: $white-primary-color;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &.dark {
+      div {
+        background-color: $dark-primary-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,118 @@
+.skills-info {
+  background-color: $white-primary-color;
+  padding: 4rem 0;
+
+  &.dark {
+    background-color: $dark-primary-color;
+  }
+
+  &__title {
+    font-size: 2.4rem;
+    font-family: 'Nunito', sans-serif;
+    margin-bottom: 2.5rem;
+    color: $dark-primary-color;
+
+    &.dark {
+      color: $white-secondary-color;
+    }
+  }
+
+  &__box {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 2rem;
+
+    @media only screen and (max-width: $bp-largest) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 2rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    color: $dark-primary-color;
+    text-decoration: none;
+    display: block;
+    border-radius: 5px;
+    border: 2px solid $white-secondary-color;
+    padding: 5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: 'Nunito', sans-serif;
+    transition: transform .2s ease-in-out;
+
+    @media only screen and (max-width: $bp-largest) {
+      padding: 5rem;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      padding: 5rem 3rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 5rem 6rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 5rem 3rem;
+    }
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 2rem 4rem rgba($gray-color, .2);
+
+      h1 {
+        color: $primary-color;
+      }
+    }
+
+    h1 {
+      color: $dark-primary-color;
+      font-weight: 800;
+      font-size: 2rem;
+      margin: 2.5rem 0 1.5rem 0;
+      transition: all .2s ease-in-out;
+    }
+
+    p {
+      font-size: 1.4rem;
+      text-align: center;
+      color: $dark-secondary-color;
+    }
+
+    i {
+      font-size: 4.5rem;
+      color: $dark-primary-color;
+    }
+
+    &.dark {
+      border: 2px solid $dark-secondary-color;
+
+      h1 {
+        color: $white-primary-color;
+      }
+
+      p {
+        color: $gray-light-color;
+      }
+
+      i {
+        color: $white-secondary-color;
+      }
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: inset 0 0 10rem rgba($gray-color, .2);
+        border: 2px solid $gray-color;
+        h1 {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}

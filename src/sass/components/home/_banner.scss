@@ -1,0 +1,111 @@
+.banner {
+  background-color: $white-secondary-color;
+
+  &.dark {
+    background-color: $dark-secondary-color;
+  }
+
+  .container {
+    display: flex;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+
+    @media only screen and (max-width: $bp-large) {
+      display: block;
+      position: relative;
+      overflow: hidden;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__intro {
+    height: 322px;
+    flex: 1;
+
+    @media only screen and (max-width: $bp-large) {
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  &__gallery {
+    height: 322px;
+    flex: 0 0 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media only screen and (max-width: $bp-large) {
+      position: absolute;
+      right: -5%;
+      top: 10%;
+      z-index: 1;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      right: -15%;
+      top: 15%;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      right: -40%;
+      top: 35%;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+      display: none;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    @media only screen and (max-width: $bp-large) {
+      opacity: .3;
+    }
+  }
+
+  &__subject {
+    font-family: 'Nunito', sans-serif;
+    font-size: 2.1rem;
+    font-weight: bold;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+    height: 322px;
+    color: $dark-primary-color;
+    transition: all .2s ease-in-out;
+
+    @media only screen and (max-width: $bp-smallest) {
+      align-items: flex-start;
+      font-size: 1.8rem;
+    }
+
+    div {
+      z-index: 1;
+    }
+
+    &.dark {
+      color: $white-primary-color;
+    }
+
+    span {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    color: $primary-color;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 2.1rem;
+  }
+}
