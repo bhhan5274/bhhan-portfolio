@@ -49,7 +49,7 @@ const SkillIntro = ({mode, skills}) => {
                         <h3>기술스택 소개</h3>
                         <p>현업에서 사용하여 프로젝트를 진행하거나 관심 있게 학습해본 경험이 있는 기술 스택입니다.</p>
                         <p>실무·토이는 해당 언어를 사용하여 결과물을 도출해본 경험이 있으며 개발된 소스코드를 이해할 수 있습니다.</p>
-                        <p>스터디 단계는 관심 있게 학습 중이며 일정 학습 정도가 되면 토이 프로젝트를 진행할 계획이 있습니다.</p>
+                        <p>스터디 단계는 관심 있게 학습 중이며 일정 학습 정도가 되면 토이 프로젝트를 진행할 계획입니다.</p>
                     </div>
                 </div>
                 <div>
@@ -99,7 +99,7 @@ const SkillIntro = ({mode, skills}) => {
                         <div className={mode === true ? "skill-intro__left" : "skill-intro__left dark"}>
                             <i className="fas fa-cogs" />
                             <div>
-                                <h5>Backend</h5>
+                                <h5>DevOps</h5>
                                 <p>형상관리와 유지보수 & 서버 구축</p>
                             </div>
                         </div>
