@@ -12,7 +12,7 @@ const Project = ({mode, dispatch, project, match: {params: {id}}}) => {
     const getProject = async (id) => {
         try{
             setLoading(true);
-            const res = await axios.get(`${process.env.REACT_APP_SERVER_URL}/career/v1/projects/${id}/view`);
+            const res = await axios.get(`${process.env.REACT_APP_SERVER_URL}/v1/projects/${id}/view`);
             dispatch({
                 type: GET_PROJECT,
                 payload: res.data

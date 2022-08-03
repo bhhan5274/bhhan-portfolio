@@ -8,7 +8,7 @@ import {connect} from "react-redux";
 const Skills = ({mode, skills, dispatch}) => {
     const getSkills = async () => {
         try{
-            const res = await axios.get(`${process.env.REACT_APP_SERVER_URL}/career/v1/skills`);
+            const res = await axios.get(`${process.env.REACT_APP_SERVER_URL}/v1/skills`);
             dispatch({
                 type: GET_SKILLS,
                 payload: res.data
