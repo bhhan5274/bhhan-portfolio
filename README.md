@@ -8,4 +8,4 @@
 - Sass
 
 ### 어플리케이션 URL
-- portfolio - https://bhhan.net
+- portfolio - https://bhhan.com
